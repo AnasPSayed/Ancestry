@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ancestry.Models", "Ancestry
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ancestry.Service", "Ancestry.Service\Ancestry.Service.csproj", "{9E7EF506-50DE-43E8-91FC-BBF282557AE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ancestry.Utility", "Ancestry.Utility\Ancestry.Utility.csproj", "{667D4B93-25CA-4496-8A39-990041829869}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9E7EF506-50DE-43E8-91FC-BBF282557AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E7EF506-50DE-43E8-91FC-BBF282557AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E7EF506-50DE-43E8-91FC-BBF282557AE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{667D4B93-25CA-4496-8A39-990041829869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667D4B93-25CA-4496-8A39-990041829869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667D4B93-25CA-4496-8A39-990041829869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667D4B93-25CA-4496-8A39-990041829869}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

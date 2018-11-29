@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{83C6526F-86F9-4412-B8B3-355514DB911B}</ProjectGuid>
+    <ProjectGuid>{667D4B93-25CA-4496-8A39-990041829869}</ProjectGuid>
     <ProjectTypeGuids>{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ancestry.Models</RootNamespace>
-    <AssemblyName>Ancestry.Models</AssemblyName>
+    <RootNamespace>Ancestry.Utility</RootNamespace>
+    <AssemblyName>Ancestry.Utility</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -78,17 +78,8 @@
     <Content Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseModels\BaseModel.cs" />
+    <Compile Include="ExtentionUtility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Ancestry.Utility\Ancestry.Utility.csproj">
-      <Project>{667D4B93-25CA-4496-8A39-990041829869}</Project>
-      <Name>Ancestry.Utility</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
