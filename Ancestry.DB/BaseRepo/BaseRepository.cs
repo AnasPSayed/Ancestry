@@ -9,23 +9,23 @@ namespace Ancestry.DB.BaseRepo
 {
     public class BaseRepository
     {
-        internal Database DbContect { get; set; }
+        internal Database DbContext { get; set; }
         public BaseRepository()
         {
-            DbContect = new Database("Ancestry");
+            DbContext = new Database("Ancestry");
         }
 
         public int Insert<T>(T tableData)
         {
             int result = 0;
-            Convert.ToInt32(DbContect.Insert(tableData));
+            Convert.ToInt32(DbContext.Insert(tableData));
             return result;
         }
 
         public List<T> Select<T>(string query)
         {
             List<T> outputList = null;
-            outputList =  DbContect.Fetch<T>(query).ToList();
+            outputList =  DbContext.Fetch<T>(query).ToList();
             return outputList;
         }
 
