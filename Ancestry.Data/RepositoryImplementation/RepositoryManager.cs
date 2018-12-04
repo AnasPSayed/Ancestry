@@ -9,5 +9,6 @@ namespace Ancestry.Data.RepositoryImplementation
 {
     public class RepositoryManager : IRepositoryManager
     {
+
     }
 }

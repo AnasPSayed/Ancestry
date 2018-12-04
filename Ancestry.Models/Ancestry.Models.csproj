@@ -79,11 +79,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseModels\BaseModel.cs" />
+    <Compile Include="Models\UserInformation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Ancestry.Utility\Ancestry.Utility.csproj">
       <Project>{667D4B93-25CA-4496-8A39-990041829869}</Project>
