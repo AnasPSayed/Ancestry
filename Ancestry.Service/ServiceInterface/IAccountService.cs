@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ancestry.Data
+namespace Ancestry.Service
 {
-    public interface IRepositoryManager
+    public interface IAccountService
     {
-        UserInformation GetUserData(LoginViewModel data);
+        UserInformation ValidateUserData(LoginViewModel data);
     }
 }
