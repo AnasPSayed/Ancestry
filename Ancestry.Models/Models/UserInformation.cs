@@ -9,13 +9,12 @@ namespace Ancestry.Models
     public class UserInformation : BaseModel
     {
         public int ID { get; set; }
-        public string Name { get; set; }
         public string UserName { get; set; }
+        public string Email { get; set; }
         public string Password { get; set; }
         public string Sex { get; set; }
         public string DOB { get; set; }
         public string Mobile { get; set; }
-        public string Email { get; set; }
         public string Profession { get; set; }
         public string HouseName { get; set; }
         public int SpouseId { get; set; }
