@@ -133,6 +133,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Theme\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ancestry.Models\Ancestry.Models.csproj">
+      <Project>{83c6526f-86f9-4412-b8b3-355514db911b}</Project>
+      <Name>Ancestry.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

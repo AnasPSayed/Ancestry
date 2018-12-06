@@ -1,19 +1,24 @@
-﻿
+﻿@model Ancestry.Models.LoginViewModel
+
 <div class="login-page">
-    <div class="form">
-        <form class="register-form">
-            <input type="text" placeholder="name" />
-            <input type="password" placeholder="password" />
-            <input type="text" placeholder="email address" />
+    <div class="form">       
+        
+        @using (Html.BeginForm("", "", FormMethod.Post, new { @class = "register-form" }))
+        {
+            @Html.TextBoxFor(m => m.UserName, new { @placeholder = "name" })
+            @Html.TextBoxFor(m => m.Password, new { @placeholder = "password" })
             <button>create</button>
             <p class="message">Already registered? <a href="#">Sign In</a></p>
-        </form>
-        <form class="login-form">
-            <input type="text" placeholder="username" />
-            <input type="password" placeholder="password" />
+        }
+
+       
+        @using (Html.BeginForm("", "", FormMethod.Post, new { @class = "login-form" }))
+        {
+            @Html.TextBoxFor(m => m.UserName, new { @placeholder = "name" })
+            @Html.TextBoxFor(m => m.Password, new { @placeholder = "Password" })
             <button>login</button>
             <p class="message">Not registered? <a href="#">Create an account</a></p>
-        </form>
+        }
     </div>
 </div>
 <script>
