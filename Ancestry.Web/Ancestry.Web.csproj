@@ -124,6 +124,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -139,6 +140,10 @@
     <ProjectReference Include="..\Ancestry.Models\Ancestry.Models.csproj">
       <Project>{83c6526f-86f9-4412-b8b3-355514db911b}</Project>
       <Name>Ancestry.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ancestry.Service\Ancestry.Service.csproj">
+      <Project>{9e7ef506-50de-43e8-91fc-bbf282557ae7}</Project>
+      <Name>Ancestry.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
