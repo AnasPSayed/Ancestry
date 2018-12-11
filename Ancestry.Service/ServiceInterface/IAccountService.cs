@@ -10,5 +10,6 @@ namespace Ancestry.Service
     public interface IAccountService
     {
         UserInformation ValidateUserData(LoginViewModel data);
+        int Register(RegistrationViewModel data);
     }
 }

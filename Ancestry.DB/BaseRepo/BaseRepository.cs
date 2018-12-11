@@ -18,7 +18,7 @@ namespace Ancestry.DB.BaseRepo
         public int Insert<T>(T tableData)
         {
             int result = 0;
-            Convert.ToInt32(DbContext.Insert(tableData));
+            result = Convert.ToInt32(DbContext.Insert(tableData));
             return result;
         }
 

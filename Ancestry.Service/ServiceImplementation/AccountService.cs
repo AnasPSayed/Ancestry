@@ -16,6 +16,7 @@ namespace Ancestry.Service
             repoManager = new RepositoryManager();
         }
         public UserInformation ValidateUserData(LoginViewModel data) => ProcessUserData(data);
+        public int Register(RegistrationViewModel data) => ProcessRegistration(data);
 
         #region PrivateMethods
         private UserInformation ProcessUserData(LoginViewModel data)
@@ -24,6 +25,21 @@ namespace Ancestry.Service
             info = repoManager.GetUserData(data);
             return info;
         }
-        #endregion
-    }
+
+        private int ProcessRegistration(RegistrationViewModel data)
+        {
+            int id = 0;
+            UserInformation info = new UserInformation();
+            info.UserName = data.UserName;
+            info.Password = data.Password;
+            info.Email = data.Email;
+            info.Sex = data.Sex;
+            info.Mobile = data.Mobile;
+            info.HouseName = data.HouseName;
+            info.Profession = data.Profession;
+            id = repoManager.Register(info);
+                return id;
+        }
+            #endregion
+        }
 }

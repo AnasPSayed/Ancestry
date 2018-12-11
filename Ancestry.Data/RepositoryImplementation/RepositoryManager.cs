@@ -16,6 +16,7 @@ namespace Ancestry.Data
             repo = new AccountRepository();
         }
         public UserInformation GetUserData(LoginViewModel data) => ProcessGetUserData(data);
+        public int Register(UserInformation data) => ProcessRegistration(data);
 
         #region PrivateMethods
         private UserInformation ProcessGetUserData(LoginViewModel data)
@@ -24,6 +25,13 @@ namespace Ancestry.Data
             info = repo.GetUserDetails(data);
             return info;
         }
-        #endregion
-    }
+
+        private int ProcessRegistration(UserInformation data)
+        {
+            int id = 0;
+            id = repo.Insert(data);
+            return id;
+        }
+            #endregion
+        }
 }

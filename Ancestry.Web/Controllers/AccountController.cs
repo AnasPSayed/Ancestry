@@ -42,5 +42,25 @@ namespace Ancestry.Web.Controllers
             }
             return View();
         }
+
+        [HttpGet]
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Register(RegistrationViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                int id = accountService.Register(model);
+                if(id>0)
+                {
+                    TempData["Success"] = "Registration successfull!!";
+                }
+            }
+            return View();
+        }
     }
 }

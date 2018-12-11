@@ -10,5 +10,6 @@ namespace Ancestry.Data
     public interface IRepositoryManager
     {
         UserInformation GetUserData(LoginViewModel data);
+        int Register(UserInformation data);
     }
 }

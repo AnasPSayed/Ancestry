@@ -4,21 +4,50 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@model Ancestry.Models.LoginViewModel
+@model Ancestry.Models.RegistrationViewModel
 
 <div class="login-page">
     <div class="form">
-        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "login-form" }))
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "register-form" }))
         {
             @Html.TextBoxFor(m => m.UserName, new { @placeholder = "name" })
             @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+
+            @Html.TextBoxFor(m => m.Email, new { @placeholder = "Email" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+
             @Html.PasswordFor(m => m.Password, new { @placeholder = "Password" })
             @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-            @Html.PasswordFor(m => m.Password, new { @placeholder = "Password" })
-            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+
+            @Html.PasswordFor(m => m.ConfirmPassword, new { @placeholder = "Confirm Password" })
+
+            @Html.DropDownListFor(m => m.Sex, new List<SelectListItem> {
+           new SelectListItem() {Text = "Male", Value = "Male" },
+          new SelectListItem() {Text = "Female", Value = "Female" }
+       }, new { @palaceholder="sex"})
+
+            @Html.TextBoxFor(m => m.DOB, new { type = "date" })
+
+            @Html.TextBoxFor(m => m.Mobile, new { @placeholder = "Mobile Number" })
+            @Html.ValidationMessageFor(m => m.Mobile, "", new { @class = "text-danger" })
+
+            @Html.TextBoxFor(m => m.HouseName, new { @placeholder = "HouseName" })
+            @Html.ValidationMessageFor(m => m.HouseName, "", new { @class = "text-danger" })
+
+            @Html.TextBoxFor(m => m.Profession, new { @placeholder = "Profession" })
+            @Html.ValidationMessageFor(m => m.Profession, "", new { @class = "text-danger" })
+
             <button>login</button>
-            <p class="message">Not registered? <a href="#">Create an account</a></p>
+            <p class="message">Not registered? <a href="@Url.Action("Login","Account")">Create an account</a></p>
+
+            <div>
+                @TempData["Success"];
+            </div>
         }
     </div>
 </div>
+
+<script>
+
+</script>
 
